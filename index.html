@@ -16,6 +16,9 @@
       name: 'From-Wetlab-To-Weblab',
       repo: 'thk61159/From-Wetlab-To-Weblab', 
       loadSidebar: true,
+      alias: {
+        '/.*/_sidebar.md': '/_sidebar.md' // 建議加入這行，防止子目錄找不到側邊欄
+      },
       subMaxLevel: 3,
       auto2top: true,
       // 插件區塊：整合 Giscus
