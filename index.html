@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+  <meta charset="UTF-8">
+  <title>一生科科考資工研究所筆記</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="從生科苦海 Context Switch 到資工世界的生存筆記">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+</head>
+<body>
+  <div id="app">一日生科終生科科 碩士級助理第一年年薪 < 73.4 萬新台幣 碩士級助理第五年年薪 < 94.6 萬新台幣</div>
+  
+  <script>
+    window.$docsify = {
+      name: 'From-Wetlab-To-Weblab',
+      repo: 'thk61159/From-Wetlab-To-Weblab', 
+      loadSidebar: true,
+      subMaxLevel: 3,
+      auto2top: true,
+      // 插件區塊：整合 Giscus
+      plugins: [
+        function(hook, vm) {
+          hook.doneEach(function() {
+            // 每次換頁手動清理並重新加載 Giscus
+            var existingGiscus = document.getElementById('giscus-container');
+            if (existingGiscus) existingGiscus.remove();
+
+            var d = document.createElement('div');
+            d.id = 'giscus-container';
+            d.style.marginTop = '50px';
+            d.style.borderTop = '1px solid #eee';
+            d.style.paddingTop = '20px';
+            document.getElementById('main').appendChild(d);
+
+            const script = document.createElement('script');
+            script.src = "https://giscus.app/client.js";
+            // --- 請在此處填入你從 giscus.app 獲得的參數 ---
+            script.setAttribute("data-repo", "thk61159/From-Wetlab-To-Weblab");
+            script.setAttribute("data-repo-id", "R_kgDORJ2F3g");
+            script.setAttribute("data-category", "Q&A");
+            script.setAttribute("data-category-id", "DIC_kwDORJ2F3s4C19BC");
+            // ------------------------------------------
+            script.setAttribute("data-mapping", "pathname");
+            script.setAttribute("data-strict", "0");
+            script.setAttribute("data-reactions-enabled", "1");
+            script.setAttribute("data-emit-metadata", "0");
+            script.setAttribute("data-input-position", "top");
+            script.setAttribute("data-theme", "preferred_color_scheme");
+            script.setAttribute("data-lang", "zh-TW");
+            script.crossOrigin = "anonymous";
+            script.async = true;
+            document.getElementById('giscus-container').appendChild(script);
+          });
+        }
+      ]
+    }
+  </script>
+
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  <style>
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding: 20px;
+      color: #b0b0b0;
+      font-size: 0.8em;
+    }
+  </style>
+  <footer id="footer">
+    本站總訪問量 <span id="busuanzi_value_site_pv"></span> 次 | 
+    您是第 <span id="busuanzi_value_site_uv"></span> 位訪客
+    <small style="margin-top: 10px; display: block;">Better-Pay-Than-Pipette</small>
+  </footer>
+
+</body>
+</html>
