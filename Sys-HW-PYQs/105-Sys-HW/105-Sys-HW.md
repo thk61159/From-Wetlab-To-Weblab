@@ -2,7 +2,7 @@
 
 ## 第 1 題 commen scense
 
-![105考古題第 1 題](./images/105-Sys-HW1.png)
+![105-Sys-HW1](./images/105-Sys-HW1.png)
 
 - (a) 同 process 的 threads 共享 heap and global data
 
@@ -18,7 +18,7 @@
 
 ## 第 2 題 commen scense
 
-![105考古題第 2 題](./images/105-Sys-HW2.png)
+![105-Sys-HW2](./images/105-Sys-HW2.png)
 
 - (b) parameter passing 可以透過 register, stack, block 也就是 heap，我們常用的 pass by pointer, pass by address~
 
@@ -37,7 +37,7 @@
 
 ## 第 3 題 common scense
 
-![105考古題第 3 題](./images/105-Sys-HW3.png)
+![105-Sys-HW3](./images/105-Sys-HW3.png)
 
 - (a) I/O-bound process 花費更多時間進行 I/O 而不是計算並由許多 short CPU bursts 組成。
 
@@ -53,7 +53,7 @@
 
 ## 第 4 題 common scense
 
-![105考古題第 4 題](./images/105-Sys-HW4.png)
+![105-Sys-HW4](./images/105-Sys-HW4.png)
 
 - (a) Dual-mode operation: User mode, Kernel mode 保護 kernel、I/O、記憶體
 
@@ -107,7 +107,7 @@
 
 ## 第 5 題 process
 
-![105考古題第 5 題](./images/105-Sys-HW5.png)
+![105-Sys-HW5](./images/105-Sys-HW5.png)
 
 - blocking : 呼叫方發起請求後，會掛起等待，直到被呼叫方完成操作並將結果返回後，呼叫方才能繼續執行
 
@@ -117,7 +117,7 @@
 
 ## 第 6 題 **NAS, SAN**
 
-![105考古題第 6 題](./images/105-Sys-HW6.png)
+![105-Sys-HW6](./images/105-Sys-HW6.png)
 
 - Windows, UNIX/Linux NAS
   - CIFS/SMB（Server Message Block）：Windows環境常用，用於檔案分享（如OneDrive）。
@@ -144,7 +144,7 @@
 
 ## 第 7 題 **File System**
 
-![105考古題第 7 題](./images/105-Sys-HW7.png)
+![105-Sys-HW7](./images/105-Sys-HW7.png)
 
 - UNIX inode 是類 Unix 檔案系統（如 Linux 的 ext4）中最核心、最重要的資料結構。
 
@@ -164,7 +164,7 @@
 
 ## 第 8 題 **RAID**
 
-![105考古題第 8 題](./images/105-Sys-HW8.png)
+![105-Sys-HW8](./images/105-Sys-HW8.png)
 
 - Redundant Arrays of Inexpensive Disks (RAID) : 是把多個硬碟組合起來，提升「速度」或「可靠性」或「兩者兼顧」的技術。
 - Redundant (冗餘) 在第五章後面介紹 Hamming code 有關，多花費一些 bit 紀錄用餘 error detect 或是 error correction
@@ -190,7 +190,7 @@
 
 ## 第 9 題 File System
 
-![105考古題第 9 題](./images/105-Sys-HW9.png)
+![105-Sys-HW9](./images/105-Sys-HW9.png)
 
 - (a) File system 容易發生 External fragmentation 才對
   - External fragmentation : 空間被切成不連續的小塊
@@ -202,7 +202,7 @@
 
 ## 第 10 題 Child Process
 
-![105考古題第 10 題](./images/105-Sys-HW10.png)
+![105-Sys-HW10](./images/105-Sys-HW10.png)
 
 <div style="page-break-after: always;"></div>
 
@@ -215,7 +215,7 @@
 
 ## 第 11 題 ISA
 
-![105考古題第 11 題](./images/105-Sys-HW11.png)
+![105-Sys-HW11](./images/105-Sys-HW11.png)
 
 - (a) 這邊所謂 powerful instruction 是指一條指令完成強大功能 ，表示一條指令下去要做複雜的任務，複雜的指令集通常增加實作與編譯器成本。
 
@@ -237,7 +237,7 @@
 
 ## 第 12 題 Cache
 
-![105考古題第 12 題](./images/105-Sys-HW12.png)
+![105-Sys-HW12](./images/105-Sys-HW12.png)
 
 - (a, b, c) 計算 address 組成
   - block size = 64 bytes = 2⁶ → offset = 6 bits
@@ -253,7 +253,7 @@
 
 ## 第 13 題 Virtrual Memory, **Page**
 
-![105考古題第 13 題](./images/105-Sys-HW13.png)
+![105-Sys-HW13](./images/105-Sys-HW13.png)
 
 - (a) 虛擬記憶體的「page」在換入換出時，寫回磁碟成本非常高，所以一定要用 write-back（dirty bit）
 
@@ -278,7 +278,7 @@
 
 ## 第 14 題 Cache
 
-![105考古題第 14 題](./images/105-Sys-HW14.png)
+![105-Sys-HW14](./images/105-Sys-HW14.png)
 
 - Cache miss 分三種： 複習
   - Compulsory miss：第一次用到資料，一定會 miss
@@ -289,17 +289,17 @@
 
 ## 第 15 題 RAID
 
-![105考古題第 15 題](./images/105-Sys-HW15.png)
+![105-Sys-HW15](./images/105-Sys-HW15.png)
 
 又是 RAID 請參考第 8 題~
 
 ## 第 16 - 20 題 **Pipeline**
 
-![105考古題第 16 題](./images/105-Sys-HW16.0.png)
+![105-Sys-HW1620](./images/105-Sys-HW16.0.png)
 
 ### 第 16 題
 
-![105考古題第 16 題](./images/105-Sys-HW16.png)
+![105-Sys-HW16](./images/105-Sys-HW16.png)
 
 - (a) clock cycle 要遷就最長的操作，I-ME, D-ME 需要 100 ps → 1 sec/100 ps  10¹²/10² = 10¹⁰ → clock cycle = 1/10¹⁰ = 10 * 10⁹ Hz = 10GHz
 
@@ -309,7 +309,7 @@
 
 ### 第 17 題
 
-![105考古題第 17 題](./images/105-Sys-HW17.png)
+![105-Sys-HW17](./images/105-Sys-HW17.png)
 
 - (a) 單一流水線的理想 CPI 是 1，僅靠重新劃分組件不能把 CPI 降到 <1（除非做超標量或亂序等架構改變）
 
@@ -321,7 +321,7 @@
 
 ### 第 18 題
 
-![105考古題第 18 題](./images/105-Sys-HW18.png)
+![105-Sys-HW18](./images/105-Sys-HW18.png)
 
 - forwarding unit
   1. R type I type 在 EX 算完之後 forward 給下一個 pipeline EX 或 forward 給下下一個 pipeline (ME → ID )
@@ -390,7 +390,7 @@
 
 ### 第 19 題
 
-![105考古題第 19 題](./images/105-Sys-HW19.png)
+![105-Sys-HW19](./images/105-Sys-HW19.png)
 
 - (a) 把 ME 跟 ALU 同時進行表示 lw 要運算 address 應該先算完，所以會把指令分成兩個前後執行
 
@@ -404,7 +404,7 @@
 
 ### 第 20 題
 
-![105考古題第 20 題](./images/105-Sys-HW20.png)
+![105-Sys-HW20](./images/105-Sys-HW20.png)
 
 - (a) branch result 會在 ALU 之後如果下一個有依賴則需要stall 3 個 clock cycle，題目有給 beq(branch 指令) 機率 30% ，所以 1 CPI + 3*0.3 = 1.9
 
@@ -418,7 +418,7 @@
 
 ## 第 21, 22 題 **Pipeline**
 
-![105考古題第 21, 22 題](./images/105-Sys-HW2122.png)
+![105-Sys-HW2122](./images/105-Sys-HW2122.png)
 
 ### 第 21 題
 
@@ -446,7 +446,7 @@
 
 ## 第 23, 24 題 Cache
 
-![105考古題第 23, 24 題](./images/105-Sys-HW2324.png)
+![105-Sys-HW2324](./images/105-Sys-HW2324.png)
 
 - 記得看到 address 後應該用 block size 做除法之後才知道屬於幾號 block 然後 mod (set number) 才是 index
 
@@ -456,7 +456,7 @@
 
 ## 第 25, 26, 27 題 **Banker Algorithm**
 
-![105考古題第 25, 26, 27 題](./images/105-Sys-HW2527.png)
+![105-Sys-HW2527](./images/105-Sys-HW2527.png)
 
 - 算出每個 process 還缺多少資源 ( Need = Max-Allocation ) 
 
@@ -472,7 +472,7 @@
 
 ## 第 28, 29 題 **Linux System**
 
-![105考古題第 28, 29 題](./images/105-Sys-HW2829.png)
+![105-Sys-HW2829](./images/105-Sys-HW2829.png)
 
 - chmod (change mode) 
   - 每個檔案/資料夾都有三種使用者身份：user, group, others 
