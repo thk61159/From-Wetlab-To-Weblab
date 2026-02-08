@@ -2,7 +2,7 @@
 
 ## 第 1 題 Tree
 
-<img title="" src="./images/105-Algorithm0103.png" alt="" data-align="center">
+![105-Algorithm0103](./images/105-Algorithm0103.png)
 
 - 從 inorder, postorder 反推樹的結構
   - 第一個 node F 一定是 left node。
@@ -12,9 +12,7 @@
 
 ## 第2題 Postfix Expression
 
-<center>
-<img title="" src="./images/105-Algorithm0406.png" alt="" data-align="center" height=600>
-</center>
+![105-Algorithm0406](./images/105-Algorithm0406.png)
 
 - 方法 1
   - 這題之前的[文章]()有寫過~ 會利用 stack 紀錄運算符號然後根據不同符號的 priority 將運算符號從 stack 取出，最後數學式轉換成 postfix expression 。
@@ -25,7 +23,7 @@
 
 ## 第3題 C++ and Linked List
 
-<img title="" src="./images/105-Algorithm0709.png" alt="" data-align="center">
+![105-Algorithm0709](./images/105-Algorithm0709.png)
 
 - F 的功能是把 first node 挪到 linked list 的最後面
 
@@ -45,7 +43,7 @@
 
 ## 第4題 BST
 
-<img title="" src="./images/105-Algorithm1012.png" alt="" data-align="center">
+![105-Algorithm1012](./images/105-Algorithm1012.png)
 
 - 結構已經畫在圖裡了，第 12 題刪除 BST node 有幾個方法 ，結果應該要維持用 inorder 讀取 BST 依然由小到大。
 
@@ -70,11 +68,9 @@
   - RB tree 可以改善 AVL tree balance 操作太多的問題，但同時平衡高度就沒有 AVL tree 精確，因此同一個數列化為 AVL tree, RB tree，AVL tree 查詢會比 RB tree 快。
   - B tree(m-way search tree) 也是一種平衡樹，但是他是設計給 secondary storage 資料交互用的，最常使用 B tree 演算法的就是資料庫。
 
-<img title="" src="./images/105-Algorithm1315.a.png" alt="" data-align="center">
+![105-Algorithm1315.a](./images/105-Algorithm1315.a.png)
 
-<center>
-<img title="" src="./images/105-Algorithm1315.png" alt="" data-align="center" height=680>
-</center>
+![105-Algorithm1315](./images/105-Algorithm1315.png)
 
 - RB tree 規則:
   1. 插入依循 BST 規則
@@ -94,7 +90,7 @@
 
 ### 第16題 Array
 
-<img title="" src="./images/105-Algorithm16.png" alt="" data-align="center">
+![105-Algorithm16](./images/105-Algorithm16.png)
 
 - A 是一個 pointer
   - A 裝 (new char[1000]) 的位址
@@ -126,7 +122,7 @@
 
 ### 第17題 Array, Linked List
 
-<img title="" src="./images/105-Algorithm17.png" alt="" data-align="center">
+![105-Algorithm17](./images/105-Algorithm17.png)
 
 - 使用 theta 符號通常表示 tight-bound 時間複雜度或是 tight-bound 空間複雜度，所以針對 b , c 敘述空間複雜度應該都是 θ (m)。
 
@@ -137,7 +133,7 @@
 
 ### 第18題 **字串搜尋演算法**
 
-<img title="" src="./images/105-Algorithm18.png" alt="" data-align="center">
+![105-Algorithm18](./images/105-Algorithm18.png)
 
 - 暴力破解 O(m*n)
   - 最差狀況就是每次比對到 pat 的最後一個字才發現錯誤
@@ -225,18 +221,15 @@
 
 ### 第19題 Min Heap
 
-<img title="" src="./images/105-Algorithm19.png" alt="" data-align="center">
+![105-Algorithm19](./images/105-Algorithm19.png)
 
 - build min heap
     1. 一個一個放入 heap 然後都依循 min heap 規則排到該 element 的正確位置，可以想像每放一個，就可能需要檢查 log₂(i) 次 ，i從 1 到 n ，如果用 log₂(1) + log₂(2)… + log₂(n) 根據 log 運算性質就會是log₂(n!) 近似 n log₂(n) ，時間複雜度表示 O(n log n)。
     2. 直接對已經放好的 heap 做 min heap，而且從尾端往前(由下而上)整理，再由該節點往下檢查 min heap
 
-        <center>
-        <img title="" src="./images/105-Algorithm19.a.png" alt="" data-align="center" height=300>
-        <img title="" src="./images/105-Algorithm19.b.png" alt="" data-align="center" height=300>
-        <img title="" src="./images/105-Algorithm19.c.png" alt="" data-align="center" height=300>
-        </center>
-
+        ![105-Algorithm19.a](./images/105-Algorithm19.a.png)
+        ![105-Algorithm19.b](./images/105-Algorithm19.b.png)
+        ![105-Algorithm19.c](./images/105-Algorithm19.c.png)
         - **時間複雜度是 O(n)**
 - 最終只要是建立 min heap 最佳的時間複雜度都是 O(n) ，merge 兩個 min heap 也是一樣，只要是一次整理整個 array 都可以達到 O(n)。
 
@@ -244,7 +237,7 @@
 
 ### 第20題 **Leftist Tree**
 
-<img title="" src="./images/105-Algorithm20.png" alt="" data-align="center">
+![105-Algorithm20](./images/105-Algorithm20.png)
 
 - ref  [intro](https://www.youtube.com/watch?v=Hy3LBl3tKq8), [ds](https://www.youtube.com/watch?v=4DwwamtBRPU), [NPL](https://www.youtube.com/watch?v=Z43QOiaYfT0), [build(insert)](https://www.youtube.com/watch?v=XEg9Id8aDDA), [merge](https://www.youtube.com/watch?v=8u4o5BdlXQo), [delete](https://www.youtube.com/watch?v=BBlPV4jwnGY)，教授講得蠻清楚的~
 
@@ -261,7 +254,7 @@
 
 ### 第21題 **Leftist Tree**
 
-<img title="" src="./images/105-Algorithm21.png" alt="" data-align="center">
+![105-Algorithm21](./images/105-Algorithm21.png)
 
 - 有可能高度為 O(n)
 
@@ -279,7 +272,7 @@
 - delete 的規則
     - 找到刪除的 node ，然後 merge 刪除的 node 的 left child 跟 right child ， 但通常應該是抓 root 取出去，然後merge left child 跟 right child，因為是min heap。
 - 以下我用畫圖的方式說明為何 insert, merge, delete 操作的時間複雜度都屬於 O(log n)。
-    <img title="" src="./images/105-Algorithm21.a.png" alt="" data-align="center">
+    ![105-Algorithm21.a](./images/105-Algorithm21.a.png)
 
 - 答案是 C
 
@@ -287,13 +280,13 @@
 
 ### 第22題 Quick Sort
 
-<img title="" src="./images/105-Algorithm22.png" alt="" data-align="center">
+![105-Algorithm22](./images/105-Algorithm22.png)
 
 - quick sort
     - 每次抓出一個數字 k 作為pivot，檢查其他數字大於 k 放到其右邊，小於 k 放到其左邊，每次至少可以排序完一個數字，這個機制一直重複做是有 divide and conquer 的
     - 如果排序的數列剛好都可以讓你依序取得中間數你才能夠達到最好的排序效果，因為你每次可以均勻地把數列分成兩半，最佳時間複雜度是 O (n log n)
     - 如果排序一個已經排序好的數列做 quick sort 每次執行你只會得到一個排序好的數字跟 n-1 個剩餘需要排序的數。
-    <img title="" src="./images/105-Algorithm22.a.png" alt="" data-align="center">
+    ![105-Algorithm22.a](./images/105-Algorithm22.a.png)
 
 - random quick sort 
     - 挑選 pivot 是隨機的可以降低遇到 O (n²) 的機率，但是最不幸就是每次隨機選 pivot 就是剛好取到未排序的數字中的最大或是最小值，所以最壞情況還是 O (n²)
@@ -304,7 +297,7 @@
 
 ### 第23題 Stable Sort
 
-<img title="" src="./images/105-Algorithm23.png" alt="" data-align="center">
+![105-Algorithm23](./images/105-Algorithm23.png)
 
 - 排序的物件有同等級的，如 [( Z, 1 ), ( B, 3 ),… ( C, 2 ), ( A, 1 )]，對其**做 stable sort 使結相同 key 的元素，排序後的「相對順序」必須與「原始輸入順序」完全相同**，可以觀察陣列中有放入順序差，利用這點可以使排序後 [( Z, 1 ),... ( A, 1 )...] 同等級的物件相對順序永遠不變。
 
@@ -314,7 +307,7 @@
 
 ### 第24題 Sort
 
-<img title="" src="./images/105-Algorithm24.png" alt="" data-align="center">
+![105-Algorithm24](./images/105-Algorithm24.png)
 
 - heap sort
     - 把 root 取出來，將最後一個 node 取出 insert 到 root ，而取 node 是 O(1)， insert node 則是 O(log n) ，n 個 node 要做➝ log₂(n) + log₂(n - 1) + log₂(n - 2)… + log₂(1) 次，根據 log 運算性質就會是 log₂(n!) 近似 n log₂(n) ，時間複雜度表示O (n log n)。
@@ -326,12 +319,12 @@
 - decision tree 
     - 是一種幫助分析 sorting 效率的 binary tree
     - 證明 sorting 的極限位什麼是 Ω (n log n)。
-    <img title="" src="./images/105-Algorithm24.a.png" alt="" data-align="center">
+    ![105-Algorithm24.a](./images/105-Algorithm24.a.png)
 
 - non-linear operators 非比較大小的運算符
     - 非比大小方式做的 sorting 可以突破 O (n log n)
     - 利用元素的額外結構（如整數、字串的位元表示）來進行計數、桶分或基數處理等操作，缺點是他只能針對定範圍或條件的資料做排序。
-    <img title="" src="./images/105-Algorithm24.b.png" alt="" data-align="center">
+    ![105-Algorithm24.b](./images/105-Algorithm24.b.png)
 
 - 答案是 C
 
@@ -339,13 +332,13 @@
 
 ### 第25題 Graph DFS, BFS, **Union and find**
 
-<img title="" src="./images/105-Algorithm25.png" alt="" data-align="center">
+![105-Algorithm25](./images/105-Algorithm25.png)
 
 - graph relation 
     - reflexive (node A to itself)
     - symmetric ((u, v) if and only if (v, u) 因為是 undirected graph)
     - transitive ((u, v), (v, w) 屬於同一個 component 則一定存在路徑 (u, w))。
-    <img title="" src="./images/105-Algorithm25.a.png" alt="" data-align="center">
+    ![105-Algorithm25.a](./images/105-Algorithm25.a.png)
 
 - 題目給你 n 個頂點（vertices）和 m 條邊（edges），例如： V = [A, B, C, D, E, F]， E = [[A,B], [A,C], [B,C], [D,E], [E,F], [F,D]] 這樣的 V 和 E 可以描述多組圖。我們的目標是 計算等價類（equivalence classes），也就是找出哪些頂點屬於同一連通分量。
 
@@ -379,7 +372,7 @@
         - Find 的單次操作 接近常數時間（嚴格說是 O(α(n))，α(n) ≤ 4）
         - 總時間 = O(m × α(n)) + O(n)（最後掃一遍） → 實務上就是 O(m + n)
 
-<img title="" src="./images/105-Algorithm25.b.png" alt="" data-align="center">
+![105-Algorithm25.b](./images/105-Algorithm25.b.png)
 
 - 三種方法時間複雜度差不多，空間最佳是 Union-Find ~ 
 
@@ -387,7 +380,7 @@
 
 ### 第26題 **Union and Find**
 
-<img title="" src="./images/105-Algorithm26.png" alt="" data-align="center">
+![105-Algorithm26](./images/105-Algorithm26.png)
 
 - using forest 
     - 把同一組的 vertices 用 tree 的結構來顯示 tree 的 root 就是該組圖的表頭。
@@ -470,11 +463,9 @@ class UnionFind:
 
 ### 第27題 math
 
-<img title="" src="./images/105-Algorithm27.png" alt="" data-align="center">
+![105-Algorithm27](./images/105-Algorithm27.png)
 
-<center>
-<img title="" src="./images/105-Algorithm27.a.png" alt="" data-align="center" height=600>
-</center>
+![105-Algorithm27.a](./images/105-Algorithm27.a.png)
 
 - 答案是 E
 
@@ -482,7 +473,7 @@ class UnionFind:
 
 ### 第28題 **Union and Find**
 
-<img title="" src="./images/105-Algorithm28.png" alt="" data-align="center">
+![105-Algorithm28](./images/105-Algorithm28.png)
 
 - (a) quick sort 的 theta 時間複雜度類比 amortized cost。
 
@@ -497,15 +488,15 @@ class UnionFind:
                 預付 → 用來補擴容
     ```
 
-<img title="" src="./images/105-Algorithm28.a.png" alt="" data-align="center">
+![105-Algorithm28.a](./images/105-Algorithm28.a.png)
 
 - 答案是 C
 
 ### 第29題 **Fib Heap**
 
-<img title="" src="./images/105-Algorithm29.png" alt="" data-align="center">
+![105-Algorithm29](./images/105-Algorithm29.png)
 
-<img title="" src="./images/105-Algorithm29.a.png" alt="" data-align="center">
+![105-Algorithm29.a](./images/105-Algorithm29.a.png)
 
 - 答案是 D
 
@@ -513,7 +504,7 @@ class UnionFind:
 
 ### 第30題 **Double Stack Queue**
 
-<img title="" src="./images/105-Algorithm30.png" alt="" data-align="center">
+![105-Algorithm30](./images/105-Algorithm30.png)
 
 - 程式碼應該錯了
     ```
@@ -538,9 +529,9 @@ class UnionFind:
 
 ## 第11題 **Hashing**
 
-<img title="" src="./images/105-Algorithm3133.a.png" alt="" data-align="center">
+![105-Algorithm3133.a](./images/105-Algorithm3133.a.png)
 
-<img title="" src="./images/105-Algorithm3133.png" alt="" data-align="center">
+![105-Algorithm3133](./images/105-Algorithm3133.png)
 
 ### 第31題 
 
@@ -576,9 +567,9 @@ class UnionFind:
 
 ## 第12題 **Master theorem**
 
-<img title="" src="./images/105-Algorithm3436.a.png" alt="" data-align="center">
+![105-Algorithm3436.a](./images/105-Algorithm3436.a.png)
 
-<img title="" src="./images/105-Algorithm3436.png" alt="" data-align="center">
+![105-Algorithm3436](./images/105-Algorithm3436.png)
 
 ### 第34題 
 
@@ -598,7 +589,7 @@ class UnionFind:
 
 ## 第13題 Binary Search
 
-<img title="" src="./images/105-Algorithm3739.png" alt="" data-align="center">
+![105-Algorithm3739](./images/105-Algorithm3739.png)
 
 - divide and conquer 會分出 sub problem ，但這個直接把東西對切操作也可以算是。
     - 三個步驟：Divide (切分) ⭢ Conquer (遞迴解) ⭢ Combine (合併結果)。
@@ -617,19 +608,17 @@ class UnionFind:
 
 ## 第14題 **Matrix Multiplication** (DP)
 
-<img title="" src="./images/105-Algorithm4042.png" alt="" data-align="center">
+![105-Algorithm4042](./images/105-Algorithm4042.png)
 
-<center>
-<img title="" src="./images/105-Algorithm4042.a.png" alt="" data-align="center" height=650>
-</center>
+![105-Algorithm4042.a](./images/105-Algorithm4042.a.png)
 
 ## 第15題 **Huffman Encode** (Greedy)
 
-<img title="" src="./images/105-Algorithm4345.png" alt="" data-align="center">
+![105-Algorithm4345](./images/105-Algorithm4345.png)
 
 題目要求每次將當前最小的 2 個頻率合併，成為 root 資訊，然後每個左節點的訊息大小會 < 右節點，建完的樹如下。
 
-<img title="" src="./images/105-Algorithm4345.a.png" alt="" data-align="center">
+![105-Algorithm4345.a](./images/105-Algorithm4345.a.png)
 
 <div style="page-break-after: always;"></div>
 
@@ -640,51 +629,47 @@ class UnionFind:
 
 - [圖的定義跟資料結構](https://www.youtube.com/watch?v=JS9MB8tp0eY)
 
-<center>
-<img title="" src="./images/105-Algorithm4648.a.png" alt="" data-align="center">
-</center>
+![105-Algorithm4648.a](./images/105-Algorithm4648.a.png)
 
 <div style="page-break-after: always;"></div>
 
 [Shortest Path for unweighted graph (BFS)](https://www.youtube.com/watch?v=e7unEsKHW54)
 
-<img title="" src="./images/105-Algorithm4648.b.png" alt="" data-align="center" height=1000>
+![105-Algorithm4648.b](./images/105-Algorithm4648.b.png)
 
 <div style="page-break-after: always;"></div>
 
 [Shortest Path for non-negative weight graph (Dijkstra) (Greedy)](https://www.youtube.com/watch?v=uyNJxsH16nc)
 
-<img title="" src="./images/105-Algorithm4648.c.png" alt="" data-align="center" height=1000>
+![105-Algorithm4648.c](./images/105-Algorithm4648.c.png)
 
 <div style="page-break-after: always;"></div>
 
 [Shortest Path for weight graph (A*) (heuristic)](https://www.youtube.com/watch?v=9R_NjVbFWjI)
 
-<img title="" src="./images/105-Algorithm4648.d.png" alt="" data-align="center" height=1000>
+![105-Algorithm4648.d](./images/105-Algorithm4648.d.png)
 
 <div style="page-break-after: always;"></div>
 
 [Shortest Path for weight graph (Bellman-Ford) (DP)](https://www.youtube.com/watch?v=YklWOOAR6rs)
 
-<img title="" src="./images/105-Algorithm4648.e.png" alt="" data-align="center" height=1000>
+![105-Algorithm4648.e](./images/105-Algorithm4648.e.png)
 
 <div style="page-break-after: always;"></div>
 
 [Shortest Path for weight graph (Floyd-Warshall) (DP)](https://www.youtube.com/watch?v=aSbdzpJh8VQ)
 
-<img title="" src="./images/105-Algorithm4648.f.png" alt="" data-align="center" height=1000>
+![105-Algorithm4648.f](./images/105-Algorithm4648.f.png)
 
 <div style="page-break-after: always;"></div>
 
 [Topology sort for directed acyclic graph (Kahn) (Greedy)](https://www.youtube.com/watch?v=t_Ut2QPC6m0)
 
-<center>
-<img title="" src="./images/105-Algorithm4648.g.png" alt="" data-align="center" height=900>
-</center>
+![105-Algorithm4648.g](./images/105-Algorithm4648.g.png)
 
 <div style="page-break-after: always;"></div>
 
-<img title="" src="./images/105-Algorithm4648.png" alt="" data-align="center">
+![105-Algorithm4648](./images/105-Algorithm4648.png)
 
 ### 第46題
 - Dijkstra 不能有負數 weight 、負權環否則無法收斂
@@ -698,53 +683,51 @@ class UnionFind:
 
 [樹的定義](https://www.youtube.com/watch?v=KsobpcI3dN0)
 
-<center>
-<img title="" src="./images/105-Algorithm4951.a.png" alt="" data-align="center" height=850>
-</center>
+![105-Algorithm4951.a](./images/105-Algorithm4951.a.png)
 
 <div style="page-break-after: always;"></div>
 
 [Minimum Spanning Trees (Prim)](https://www.youtube.com/watch?v=GLlIaT_PxVE)
 
-<img title="" src="./images/105-Algorithm4951.b.png" alt="" data-align="center" height=1000>
+![105-Algorithm4951.b](./images/105-Algorithm4951.b.png)
 
 <div style="page-break-after: always;"></div>
 
 [Minimum Spanning Trees (Kruskal)](https://www.youtube.com/watch?v=Z4jm4o2bt28)
 
-<img title="" src="./images/105-Algorithm4951.c.png" alt="" data-align="center" height=1000>
+![105-Algorithm4951.c](./images/105-Algorithm4951.c.png)
 
 <div style="page-break-after: always;"></div>
 
-<img title="" src="./images/105-Algorithm4951.png" alt="" data-align="center">
+![105-Algorithm4951](./images/105-Algorithm4951.png)
 
 ## 第18題 **Maximum Flow** (Greedy)
 
 [flow 問題 naive 算法](https://www.youtube.com/watch?v=6DFWUgV5Osc)
 
-<img title="" src="./images/105-Algorithm5254.a.png" alt="" data-align="center" height=1000>
+![105-Algorithm5254.a](./images/105-Algorithm5254.a.png)
 
 <div style="page-break-after: always;"></div>
 
 [flow 問題 Ford-Fulkerson & Edmonds–Karp](https://www.youtube.com/watch?v=8sLON0DqLZo)
 
-<img title="" src="./images/105-Algorithm5254.b.png" alt="" data-align="center" height=1000>
+![105-Algorithm5254.b](./images/105-Algorithm5254.b.png)
 
 <div style="page-break-after: always;"></div>
 
 [flow 問題 Dinic’s](https://www.youtube.com/watch?v=mtxzaGFLIAo)
 
-<img title="" src="./images/105-Algorithm5254.c.png" alt="" data-align="center" height=1000>
+![105-Algorithm5254.c](./images/105-Algorithm5254.c.png)
 
 <div style="page-break-after: always;"></div>
 
 [flow 問題 Min-Cut](https://www.youtube.com/watch?v=Ev_lFSIzNh4)
 
-<img title="" src="./images/105-Algorithm5254.d.png" alt="" data-align="center" height=1000>
+![105-Algorithm5254.d](./images/105-Algorithm5254.d.png)
 
 <div style="page-break-after: always;"></div>
 
-<img title="" src="./images/105-Algorithm5254.png" alt="" data-align="center">
+![105-Algorithm5254](./images/105-Algorithm5254.png)
 
 ### 第52題
 
@@ -762,23 +745,23 @@ class UnionFind:
 
 - [Bipartite Graphs](https://www.youtube.com/watch?v=lyH43SAcyjc)
 
-<img title="" src="./images/105-Algorithm5254.e.png" alt="" data-align="center" height=1000>
+![105-Algorithm5254.e](./images/105-Algorithm5254.e.png)
 
 <div style="page-break-after: always;"></div>
 
 - [Maximum-Cardinality Bipartite Matching](https://www.youtube.com/watch?v=cndaoZ6XTxA)
 
-<img title="" src="./images/105-Algorithm5254.f.png" alt="" data-align="center">
+![105-Algorithm5254.f](./images/105-Algorithm5254.f.png)
 
 - [Maximum-Weight Bipartite Matching](https://www.youtube.com/watch?v=7yN_KZijerA)
 
-<img title="" src="./images/105-Algorithm5254.g.png" alt="" data-align="center">
+![105-Algorithm5254.g](./images/105-Algorithm5254.g.png)
 
 <div style="page-break-after: always;"></div>
 
 ## 第19題 **Dijkstra, Bellmen-Ford**
 
-<img title="" src="./images/105-Algorithm5557.png" alt="" data-align="center">
+![105-Algorithm5557](./images/105-Algorithm5557.png)
 
 圖 A (G, w)，加入一個新的 vertex 跟多個 s 的edges 得到 G' , w, s，先用 Bellmen-Ford 檢查是否有負權環，沒有負權環可以繼續執行，Dijkstra 不能有負權環之外不能有負數權重，w’(u, v) 應該要 > 0 ，然後使用 Dijkstra 算出新的最短路徑。
 
@@ -831,7 +814,7 @@ Non-deterministic Turing machine 幾乎不可能存在但其概念比起 determi
         #一組變數或變數的否定
         literal = x 或 ¬x
     ```
-<img title="" src="./images/105-Algorithm5860.png" alt="" data-align="center">
+![105-Algorithm5860](./images/105-Algorithm5860.png)
 
 ### 第58題 2-SAT 3-SAT
 
