@@ -57,7 +57,19 @@
             document.getElementById('giscus-container').appendChild(script);
           });
         }
-      ]
+      ],
+      markdown: {
+        smartypants: true,
+        renderer: {
+          // 範例：自定義程式碼區塊的渲染方式
+          code: function(code, lang) {
+                  if (lang === "tex") {
+                    return '<span class="tex">' + katex.renderToString(code) + '</span>';
+                  }
+                  return this.origin.code.apply(this, arguments);
+                }
+          }
+      }
     }
   </script>
 
