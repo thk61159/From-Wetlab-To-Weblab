@@ -2,22 +2,15 @@
 
 ## 第 1-3 題 AVL Tree
 
-
 ![111-Algorithm0103](./images/111-Algorithm0103.png) 
-
 
 ### 第 1 題
 
-
 ![111-Algorithm0103.a.png](./images/111-Algorithm0103.a.png) 
-
-
 
 ### 第 2 題
 
-
 ![111-Algorithm0103.b.png](./images/111-Algorithm0103.b.png) 
- 
 
 ### 第 3 題
 
@@ -157,8 +150,6 @@ $\sum_{i=1}^{n} i^k$ 的成長速度大約等於 $\int_{0}^{n} x^k dx = \frac{n^
 
 - (e) **要建立一個二元搜尋樹 (BST)，本質上等於對資料進行排序。未排序資料： 要從 list 取 n 次數字到 BST ，如果剛好 BST 退化成 list 每次插入要走 i 次 ( ∑ i) 所以最差需要 O(n²) 次; 已排序資料: 可以從 n/2 處往前往後遞迴處理每個 non leaf node，最多需要 O(n) 次**
 
-<div style="page-break-after: always;"></div>
-
 ## 第 16 題 **List**
 
 ![111-Algorithm16.png](./images/111-Algorithm16.png)
@@ -198,9 +189,7 @@ $\sum_{i=1}^{n} i^k$ 的成長速度大約等於 $\int_{0}^{n} x^k dx = \frac{n^
 
 ## 第 19 題 Prefix, Postfix, Infix Expression
 
- 
 ![111-Algorithm19.png](./images/111-Algorithm19.png)
- 
 
 - Prefix, Postfix 表示法其實規律在於用 Infix 表示法建立一個 Expression Tree 如題目最終建立的 tree 會如下
 ```
@@ -403,8 +392,6 @@ $\sum_{i=1}^{n} i^k$ 的成長速度大約等於 $\int_{0}^{n} x^k dx = \frac{n^
 
 - **Decide whether a positive number is a composite number(隨著 AKS 質數測試演算法的發現，此問題已被證明屬於 P，但它依然屬於 NP。)**
 
-<div style="page-break-after: always;"></div>
-
 ## 第 37 題 P vs NP (105 第 20 題)
 
  
@@ -423,9 +410,7 @@ $\sum_{i=1}^{n} i^k$ 的成長速度大約等於 $\int_{0}^{n} x^k dx = \frac{n^
 
 ## 第 38 題 P vs NP (105 第 20 題)
 
- 
 ![111-Algorithm38.png](./images/111-Algorithm38.png)
- 
 
 - **Vertex Cover 問題**： 
     - 給定一個無向圖 G=(V, E) 和整數 k，是否存在一個頂點集合 S ⊆ V，使得 |S| ≤ k，且圖中的每一條邊都至少有一個端點在 S 中？

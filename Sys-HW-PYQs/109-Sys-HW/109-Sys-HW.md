@@ -37,9 +37,7 @@
 
 ## 第 3 題 **Semaphore**
 
-
 ![109-Sys-HW03.png](./images/109-Sys-HW03.png)
-
 
 - Semaphore。它是一個整數變數，除了初始化外，只能透過兩個**原子（Atomic）**操作來存取：wait() (又稱 P 操作) 和 signal() (又稱 V 操作)。
 
@@ -94,9 +92,7 @@ Allocation 是目前 process 佔有的資源，MAX 則是完成 process 並釋�
 
 ## 第 5 題 **Mutex**
 
-
 ![109-Sys-HW05.png](./images/109-Sys-HW05.png)
-
 
 - (a) main 中 sem_init 打開 mutex，然後 loop 3 個 pthread create ，callbake fn 中 m++ , print 會是原子操作 ，此操作防止了 race condition 。
 
@@ -156,8 +152,6 @@ Allocation 是目前 process 佔有的資源，MAX 則是完成 process 並釋�
      1. 讀取父目錄：OS 讀取父目錄 d 的 Inode，找到 d 的 Data Block 位置
      2. 寫入 Directory Entry：在 $d$ 的 Data Block 中，新增一筆紀錄 (filename: "file.txt", inode: 1234)。
      3. 如果父目錄 d 的 Data Block 空間滿了，OS 必須先為目錄 d 分配一個新的 Data Block，才能寫入這筆新的 entry。
-
-<div style="page-break-after: always;"></div>
 
 - 寫入資料 (Write Data) 的運作流程
   1. 分配資料區塊 (Data Block Allocation)
@@ -222,8 +216,6 @@ ref: 105-Sys-HW第 11 題 ISA 選項 (e)
 - (d) **Amdahl's law**
   ![109-Sys-HW13.a.png](./images/109-Sys-HW13.a.png)
 
-<div style="page-break-after: always;"></div>
-
 ## 第 14 題 **MIPS 指令**
 
 ![109-Sys-HW14.png](./images/109-Sys-HW14.png)
@@ -239,8 +231,6 @@ ref: 105-Sys-HW第 11 題 ISA 選項 (e)
         - 格式結構 (32 bits)：$$\begin{array}{|c|c|}\hline\text{op (6)} & \text{address (26)} \\\hline\end{array}$$
         - j, jal
 
-<div style="page-break-after: always;"></div>
-
 ## 第 15 題 Float point, Branch
 
 ![109-Sys-HW15.png](./images/109-Sys-HW15.png)
@@ -255,9 +245,7 @@ ref: 105-Sys-HW第 11 題 ISA 選項 (e)
 
 ## 第 16 題 Pipeline, ALU, Instruction
 
-
 ![109-Sys-HW16.png](./images/109-Sys-HW16.png)
-
 
 - Multiplexer M1：M1 是用來決定「寫入哪個暫存器（Write Register）」的（rt 還是 rd）， beq 指令不會寫回暫存器，因此 M1 的選擇對 beq 來說不是必要元件。
 
@@ -302,8 +290,6 @@ ref: 105-Sys-HW第 11 題 ISA 選項 (e)
 
 - Block size 太大會導致 Cache Pollution。特別是在處理矩陣子集 (Stride 大，跳著讀) 時，會讀入大量不必要的鄰近資料 (Low spatial locality for the specific task)，浪費頻寬與 Cache 空間。 (我以為 Stride 時候要自行配合 cache block size )
 
-<div style="page-break-after: always;"></div>
-
 ## 第 20 題 **Pipeline 困難**
 
 ![109-Sys-HW20.png](./images/109-Sys-HW20.png)
@@ -340,8 +326,6 @@ ref: 105-Sys-HW第 11 題 ISA 選項 (e)
 - memory map 都是 VA ，
     - 如果改問 VA 答案是：7f11da0b6000-7f11da279000 r-xp ... /usr/lib64/libc-2.17.so。
 
-<div style="page-break-after: always;"></div>
-
 ### 第 27 題  ( gemini 說 a 比較正確 ~)
 
 - (a) We can skip swapping out memory pages that are backed by a memory-mapped file. (我們可以跳過將「檔案映射分頁」寫入置換空間的動作)
@@ -366,9 +350,7 @@ ref: 105-Sys-HW第 11 題 ISA 選項 (e)
 
 ## 第 28-30 題 ALU
 
-
 ![109-Sys-HW2830.png](./images/109-Sys-HW2830.png)
-
 
 - NOR 是 not or ，而元件中 NOT gate雖然要對 A 跟 B 做，但是是並行發生的， 2 MUX (選擇器， 選 A 還是 ¬A)也是 OR gate 也是一樣道理，最後就是 32 個 1 bit ALU 也是並行使用 4 MUX (選擇器， 選操作 AND, OR, ADD, SUB) ，所以 1 + 2 + 1 + 4 = 8
 
@@ -378,9 +360,7 @@ ref: 105-Sys-HW第 11 題 ISA 選項 (e)
 
 ## 第 31-33 題 **Hamming code** 
 
-
-  <img src="./109-Sys-HW3133.a.png" alt="置中圖片">
-
+![109-Sys-HW3133.a.png](./images/109-Sys-HW3133.a.png)
 
 ![109-Sys-HW3133.png](./images/109-Sys-HW3133.png)
 

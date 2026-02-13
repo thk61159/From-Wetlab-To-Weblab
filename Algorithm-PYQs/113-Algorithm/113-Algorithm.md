@@ -156,13 +156,9 @@ b, strong {
 
 - (e) Ford-Fulkerson 的一個變體——Edmonds-Karp 演算法，透過廣度優先搜尋（BFS）尋找增廣路徑，其時間複雜度為 $O(VE^2)$，屬於多項式時間演算法。
 
-<div style="page-break-after: always;"></div>
-
 ### 第 14 題
 
- 
 ![113-Algorithm14](./images/113-Algorithm14.png)
- 
 
 - (a) 路徑 $S \to A \to C \to B \to T$ 還有 1 個容量可以被利用所以是 augmenting path 
 
@@ -175,10 +171,9 @@ b, strong {
 
 ## 第 15-16 題 
 
- 
 ![113-Algorithm1516.1](./images/113-Algorithm1516.1.png)
+
 ![113-Algorithm1516.2](./images/113-Algorithm1516.2.png)
- 
 
 1. sum(n) 函式: 計算整數 n 的各個位數之和（Digit Sum）。
 
@@ -233,10 +228,6 @@ b, strong {
 
 假設 $Q$ 是一個凸多邊形，其邊界上的頂點按順時針順序排列，表示為 $Q = \{p_1, p_2, ..., p_n\}$，其中 $p_1 = p_n$ 且 $n \ge 3$。給定一個向量 $\vec{l}$，考慮 $Q$ 中所有點在 $\vec{l}$ 方向上的投影。對於任意兩點 $q, r \in Q$，若 $r$ 的投影比 $q$ 的投影距離 $\vec{l}$ 的起點更遠，我們記作 $q <_l r$。最大值點（Maximal Point）：若 $Q$ 中不存在任何點 $r$ 使得 $q <_l r$，則稱 $q$ 為該方向上的最大值點。最小值點（Minimal Point）：若 $Q$ 中不存在任何點 $r$ 使得 $r <_l q$，則稱 $q$ 為該方向上的最小值點。範例：在圖 (a) 中，$p_1$ 與 $p_6$ 是最大值點，$p_4$ 是最小值點。
 
-<div style="page-break-after: always;"></div>
-
-<div class="tight-list">
-
 ### 第 19 題 
 
 令 $\delta(Q)$ 代表 $Q$ 的邊界。下列關於 $Q$ 的性質敘述何者正確？
@@ -274,8 +265,6 @@ b, strong {
 
 - (E) 對於任何 $1 < i < n$，點 $p_i$ 是最大值點的充要條件（if and only if）為 $p_{i-1} <_l p_i$ 且 $p_{i+1} <_l p_i$（註：原文圖中選項 E 略有模糊，此為根據邏輯與上下文反推）。
     - ✖：圖中顯示單純比較鄰居關係不足以構成充分必要條件，需考慮多邊形的整體單峰性質（Unimodal）。
-
-</div>
 
 ### 第 21 題 
 
@@ -316,8 +305,6 @@ b, strong {
 
 - Inorder 走訪不能唯一識別 BST 
     - 給定你排序好的數列，你可以排出很多種 BST
-
-<div style="page-break-after: always;"></div>
 
 ![113-Algorithm01DE](./images/113-Algorithm01DE.png)
 
@@ -364,8 +351,6 @@ B tree 子樹與鍵值 (Key) 的關係限制
 
 尋找 $PV(i)$ 相當於：固定 $a_i$ 為最高點。在 $a_i$ 左側（$1 \dots i-1$）找一個遞增序列。在 $a_i$ 右側（$i+1 \dots n$）找一個相對應的對稱序列。限制：左右選出的數字必須成對相等，且都必須小於 $a_i$。
 
-<div class="tight-list">
-
 問題邏輯分析
 1. 雙峰序列 (Bimodal Sequence)：序列在樞紐（Pivot） $k$ 之前是嚴格遞增，之後是嚴格遞減。意即：$b_1 < b_2 < \dots < b_k > b_{k+1} > \dots > b_m$。
 
@@ -380,12 +365,6 @@ B tree 子樹與鍵值 (Key) 的關係限制
         -物理意義：這代表找到一對相同的數值分別放在樞紐的左右兩對稱位置。
     2. $PV(i)$ 的最終遞迴式: $PV(i)$ 表示以 $a_i$ 為中心（樞紐）時，迴文雙峰子序列的最大長度。除了中心點 $a_i$ 自己（長度為 1），左右兩邊對稱的長度需乘上 2：
         - $$PV(i) = 1 + 2 \times \max \{ f(j, k) \mid 0 \le j < i, i < k \le n+1, a_j = a_k < a_i \}$$
-
-</div>
-
-<div style="page-break-after: always;"></div>
-
-<div class="tight-list tight-h3 tight-p tight-h2">
 
 ## 題組 第 4 題 
 
@@ -429,5 +408,3 @@ def find_r(a, b, tolerance=1e-6):
             r_high = r_mid
     return (r_low + r_high) / 2
 ```
-
-</div>

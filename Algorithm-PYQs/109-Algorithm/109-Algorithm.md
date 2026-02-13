@@ -33,11 +33,7 @@
 
 這題難在讀懂問題 ，HamC 是一個判斷輸入的圖是否為 Hamiltonian Cycle 的函式，HamP 則是一個判斷輸入的圖是否存在符合條件路徑(如題)，利用HamC 完成 HamP 需要使用 4 個輔助 vertex ，使的 4 個輔助 vertex 加入圖 G 後 G (V, E) ∪ { 𝓁1, 𝓁2, 𝓁3, 𝓁4 , 與一些新 edge } 成為有 Hamiltonian Cycle 的圖。
 
-
 ![109-Algorithm0609](./images/109-Algorithm0609.png)
-
-
-<div style="page-break-after: always;"></div>
 
 ## 第 4 題 B-tree (m-way search tree)
 
@@ -50,12 +46,9 @@
     - When a B-Tree node reaches its maximum size and a new value needs to be inserted, the node is split and a new level may be created.
     - New data is always inserted into a leaf node first, then propagated (recursively) back up to the parent nodes if necessary.
 
-
 ![109-Algorithm1011.a](./images/109-Algorithm1011.a.png)
 
-
 ![109-Algorithm1011](./images/109-Algorithm1011.png)
-
 
 - every node 最多有 2t-1 keys
 
@@ -70,8 +63,6 @@
 - 如果插入的node 已經滿 key 則需要將插入數字一起放進數列取出中位數最為新的 parent key
 
 - 當發生 split 將 parent key 插入上層如果插入的上層也滿了就再往上 split
-
-<div style="page-break-after: always;"></div>
 
 ## 第 5 題 Minimum Spanning Trees
 

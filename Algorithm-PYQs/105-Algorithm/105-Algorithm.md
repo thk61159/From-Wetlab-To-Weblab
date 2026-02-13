@@ -500,8 +500,6 @@ class UnionFind:
 
 - 答案是 D
 
-<div style="page-break-after: always;"></div>
-
 ### 第30題 **Double Stack Queue**
 
 ![105-Algorithm30](./images/105-Algorithm30.png)
@@ -620,8 +618,6 @@ class UnionFind:
 
 ![105-Algorithm4345.a](./images/105-Algorithm4345.a.png)
 
-<div style="page-break-after: always;"></div>
-
 
 ## 第16題 **Shortest Path** 
 
@@ -631,43 +627,29 @@ class UnionFind:
 
 ![105-Algorithm4648.a](./images/105-Algorithm4648.a.png)
 
-<div style="page-break-after: always;"></div>
-
 [Shortest Path for unweighted graph (BFS)](https://www.youtube.com/watch?v=e7unEsKHW54)
 
 ![105-Algorithm4648.b](./images/105-Algorithm4648.b.png)
-
-<div style="page-break-after: always;"></div>
 
 [Shortest Path for non-negative weight graph (Dijkstra) (Greedy)](https://www.youtube.com/watch?v=uyNJxsH16nc)
 
 ![105-Algorithm4648.c](./images/105-Algorithm4648.c.png)
 
-<div style="page-break-after: always;"></div>
-
 [Shortest Path for weight graph (A*) (heuristic)](https://www.youtube.com/watch?v=9R_NjVbFWjI)
 
 ![105-Algorithm4648.d](./images/105-Algorithm4648.d.png)
-
-<div style="page-break-after: always;"></div>
 
 [Shortest Path for weight graph (Bellman-Ford) (DP)](https://www.youtube.com/watch?v=YklWOOAR6rs)
 
 ![105-Algorithm4648.e](./images/105-Algorithm4648.e.png)
 
-<div style="page-break-after: always;"></div>
-
 [Shortest Path for weight graph (Floyd-Warshall) (DP)](https://www.youtube.com/watch?v=aSbdzpJh8VQ)
 
 ![105-Algorithm4648.f](./images/105-Algorithm4648.f.png)
 
-<div style="page-break-after: always;"></div>
-
 [Topology sort for directed acyclic graph (Kahn) (Greedy)](https://www.youtube.com/watch?v=t_Ut2QPC6m0)
 
 ![105-Algorithm4648.g](./images/105-Algorithm4648.g.png)
-
-<div style="page-break-after: always;"></div>
 
 ![105-Algorithm4648](./images/105-Algorithm4648.png)
 
@@ -677,27 +659,19 @@ class UnionFind:
 ### 第48題
 - RELAX 操作是更新新的最短距離，對於 Dijkstra 要操作 RELAX 都是在取 min vertex in priority heap 後，檢查該 vertex 的 edge ，這些操作都是 O(1)。
 
-<div style="page-break-after: always;"></div>
-
 ## 第17題 **Minimum Spanning Trees** (Greedy)
 
 [樹的定義](https://www.youtube.com/watch?v=KsobpcI3dN0)
 
 ![105-Algorithm4951.a](./images/105-Algorithm4951.a.png)
 
-<div style="page-break-after: always;"></div>
-
 [Minimum Spanning Trees (Prim)](https://www.youtube.com/watch?v=GLlIaT_PxVE)
 
 ![105-Algorithm4951.b](./images/105-Algorithm4951.b.png)
 
-<div style="page-break-after: always;"></div>
-
 [Minimum Spanning Trees (Kruskal)](https://www.youtube.com/watch?v=Z4jm4o2bt28)
 
 ![105-Algorithm4951.c](./images/105-Algorithm4951.c.png)
-
-<div style="page-break-after: always;"></div>
 
 ![105-Algorithm4951](./images/105-Algorithm4951.png)
 
@@ -707,25 +681,21 @@ class UnionFind:
 
 ![105-Algorithm5254.a](./images/105-Algorithm5254.a.png)
 
-<div style="page-break-after: always;"></div>
 
 [flow 問題 Ford-Fulkerson & Edmonds–Karp](https://www.youtube.com/watch?v=8sLON0DqLZo)
 
 ![105-Algorithm5254.b](./images/105-Algorithm5254.b.png)
 
-<div style="page-break-after: always;"></div>
 
 [flow 問題 Dinic’s](https://www.youtube.com/watch?v=mtxzaGFLIAo)
 
 ![105-Algorithm5254.c](./images/105-Algorithm5254.c.png)
 
-<div style="page-break-after: always;"></div>
 
 [flow 問題 Min-Cut](https://www.youtube.com/watch?v=Ev_lFSIzNh4)
 
 ![105-Algorithm5254.d](./images/105-Algorithm5254.d.png)
 
-<div style="page-break-after: always;"></div>
 
 ![105-Algorithm5254](./images/105-Algorithm5254.png)
 
@@ -741,13 +711,11 @@ class UnionFind:
 
 - bipartite 是另一個算法下面來做補充
 
-<div style="page-break-after: always;"></div>
 
 - [Bipartite Graphs](https://www.youtube.com/watch?v=lyH43SAcyjc)
 
 ![105-Algorithm5254.e](./images/105-Algorithm5254.e.png)
 
-<div style="page-break-after: always;"></div>
 
 - [Maximum-Cardinality Bipartite Matching](https://www.youtube.com/watch?v=cndaoZ6XTxA)
 
@@ -757,7 +725,6 @@ class UnionFind:
 
 ![105-Algorithm5254.g](./images/105-Algorithm5254.g.png)
 
-<div style="page-break-after: always;"></div>
 
 ## 第19題 **Dijkstra, Bellmen-Ford**
 
@@ -791,7 +758,6 @@ Non-deterministic Turing machine 幾乎不可能存在但其概念比起 determi
 
 舉例一個 NP 問題，給你一個數字為兩個質數的乘積 133 ，找到兩個質數 7 * 19 ，這個問題你只能把每個質數拿來對 133 除看看才能找到答案，如果質數的乘積非常大，可能要檢驗非常多次。但是如果你想檢驗答案卻非常快，只需要檢查是否可以整除這個操作卻是 P 問題。這個原理被用在 RSA 加密演算法~
 
-<div style="page-break-after: always;"></div>
 
 - 接下來都沒把握我完全正確
 

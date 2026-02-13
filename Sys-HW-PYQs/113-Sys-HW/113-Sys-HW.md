@@ -25,14 +25,12 @@ b, strong {
 
 ![113-Sys-HW01.png](./images/113-Sys-HW01.png) 
 
-<!-- - 指令集架構:
+- 指令集架構:
 
 | 類型 | 指令集 / 架構 | 功耗 | 主要應用 | 代表廠商 |
 |------|---------------|------|----------|----------|
 | CISC | x86 / x64     | 較高 | PC、Server | Intel、AMD |
-| RISC | ARM 架構     | 較低 | Mobile、IoT、Server | Apple、Qualcomm、AWS | -->
-
-<div class="tight-list tight-p ">
+| RISC | ARM 架構     | 較低 | Mobile、IoT、Server | Apple、Qualcomm、AWS |
 
 - X86 指令 Protection Rings
     - Ring 0（Kernel mode）
@@ -73,8 +71,6 @@ b, strong {
     - `LTR` (載入工作暫存器)
     - `LMSW` (載入機器狀態字)
 
-</div>
-
 ## 第 2 題 **x86 Instruction**
 
 ![113-Sys-HW02.png](./images/113-Sys-HW02.png) 
@@ -102,9 +98,7 @@ b, strong {
 
 ## 第 3 題 **Process**
 
- 
 ![113-Sys-HW03.png](./images/113-Sys-HW03.png) 
- 
 
 - 使用 `aligned_alloc` 要求回傳一個地址，該地址必須是 pagesize 的倍數。
 
@@ -124,9 +118,7 @@ b, strong {
 
 ## 第 4 題 OS Scheduling
 
- 
 ![113-Sys-HW04.png](./images/113-Sys-HW04.png) 
- 
 
 (a) Longest Job First(LJF) 根據計算複雜度排序，優先執行最複雜的任務
 
@@ -138,9 +130,7 @@ b, strong {
 
 ## 第 5 題 Syscall
 
- 
 ![113-Sys-HW05.png](./images/113-Sys-HW05.png) 
- 
 
 ```
 RAX：存放 系統呼叫編號 (System call number)
@@ -158,9 +148,7 @@ write 函式原型：
 
 ## 第 6 題 Process
 
- 
 ![113-Sys-HW06.png](./images/113-Sys-HW06.png) 
- 
 
 - (a) 在 UNIX 中，新行程由 fork() 產生，且包含原始行程位址空間的副本
     - 現代系統會使用 Copy-on-Write 技術來優化效能，但概念上它確實是一個副本。
@@ -173,11 +161,7 @@ write 函式原型：
 
 ## 第 7 題 **I/O System**
 
- 
 ![113-Sys-HW07.png](./images/113-Sys-HW07.png) 
- 
-
-<div class="tight-list tight-p ">
 
 - (a) 基於 NAND 快閃記憶體的 SSD 壽命有限，控制器的軟體層會執行損耗均衡（Wear Leveling）且無需作業系統參與
 
@@ -189,13 +173,9 @@ write 函式原型：
     - Anonymous Memory： 如 Heap 或 Stack，沒有對應的磁碟檔案，必須寫入 Swap Space 才能釋放。
     - File-backed Memory： 如程式碼段或 mmap 的檔案。因為磁碟上本來就有這份檔案，當記憶體不足時，核心只需要直接「捨棄（Discard）」分頁即可，不需要佔用 Swap。需要時再從原檔案讀回即可。
 
-
-
 ## 第 8 題 **Memory Management**
 
- 
 ![113-Sys-HW08.png](./images/113-Sys-HW08.png) 
- 
 
 - **(a)** Page Fault 是由 MMU (記憶體管理單元) 觸發的，而不是 DRAM 控制器。當 CPU 試圖存取的 Page Table 中的 Valid bit 為 0 時，MMU 會發出陷阱 (Trap) 給作業系統核心。DRAM Controller 僅負責實體地址的讀寫訊號，不具備處理虛擬記憶體分頁邏輯的功能。
 
@@ -208,9 +188,7 @@ write 函式原型：
 
 ## 第 9 題 **Virtual Memory Management**
 
- 
 ![113-Sys-HW09.png](./images/113-Sys-HW09.png) 
- 
 
 - (a) 一旦作業系統開啟了分頁機制（在 x86 中是將 `CR0` 暫存器的 `PG` 位元設為 1），所有在 User Mode 下執行的指令所產生的位址都會被視為虛擬位址。
     - user process 絕對無法繞過 MMU 去直接存取 Physical Address ，這是為了確保行程間的隔離與系統安全。
@@ -228,9 +206,7 @@ write 函式原型：
 
 ## 第 10 題 **File System**
 
- 
 ![113-Sys-HW10.png](./images/113-Sys-HW10.png) 
- 
 
 - (a) 檔案控制區塊 (FCB) 在 UNIX 中稱為 inode，包含檔案擁有者、權限及資料位置
     - inode 不包含「檔案名稱」，檔名是儲存在目錄檔案（Directory file）的項目中。
@@ -247,9 +223,7 @@ write 函式原型：
 
 ## 第 11 題 **MIPS ISA**
 
- 
 ![113-Sys-HW11.png](./images/113-Sys-HW11.png) 
- 
 
 - (a) (b) MIPS ISA 中共有 5 種定址模式
     1. Immediate Addressing (I-type) (`addi`)
@@ -266,13 +240,10 @@ write 函式原型：
     - `lui` (Load Upper Immediate) 載入高 16 位元
     - `ori` (Or Immediate) 或 addi 填入低 16 位元
 
-</div>
 
 ## 第 12 題 **Pipelining**
 
- 
 ![113-Sys-HW12.png](./images/113-Sys-HW12.png) 
- 
 
 - write register（寫入目標暫存器編號） 的輸入來源並非標準的 MEM/WB 管線暫存器，而是直接連接到了 EX/MEM 管線暫存器 的輸出。
     - 使得某指令執行到 WB 將會把資料存到下一個指令的 write register
@@ -283,13 +254,10 @@ write 函式原型：
 
 - `$0` always 是 0 ; `$1` = 7; `$4` = 4
 
-<div class="tight-list tight-p ">
 
 ## 第 13 題 **Pipelining**
 
- 
 ![113-Sys-HW13.png](./images/113-Sys-HW13.png) 
- 
 
 - (a) Load 指令後緊跟著一個使用其結果的條件分支，應該需要 2 個 stall 等待讀取記憶體後 forward 到 decode 階段 hazard detect unit
 
@@ -307,9 +275,7 @@ write 函式原型：
 
 ## 第 14 題 CPI
 
- 
 ![113-Sys-HW14.png](./images/113-Sys-HW14.png) 
- 
 
 - 處理器 P1 的計算
     - 平均 CPI ($CPI_{P1}$)：
@@ -328,7 +294,6 @@ write 函式原型：
 - (d) 針對執行時間較長的處理器 (P1)，有可能只改進其中一類指令就讓它變快
     - Amdahl's Law
 
-</div>
 
 ## 第 15 題 MIPS ISA
 
@@ -349,17 +314,10 @@ write 函式原型：
     - 如果一個新的 R-type 指令可以完成原本需要 2 個指令才能做到的事情（例如一個同時做加法與位移的指令），那麼編譯後的指令總數就會減少。
     - 由於新的 ISA 是原先 ISA 的超集（Superset），編譯器在最差的情況下也只需要使用原本的指令集，因此指令數量「總是」會小於或等於原始版本。
 
-<div style="page-break-after: always;"></div>
-
-<div class="tight-list tight-p ">
-
-
 ## 第 16 題 **AI chip**
-
  
 ![113-Sys-HW16.png](./images/113-Sys-HW16.png) 
  
-
 - (a) AI 加速器晶片運作時需要大量數據，因此優化記憶體存取與緩解大量記憶體需求是設計上的重大挑戰
     - AI 模型（特別是像 GPT 這樣的龐然大物）擁有數十億甚至數兆個參數。計算單元（運算核心）跑得飛快，但資料如果從記憶體搬運的速度跟不上，運算核心就會閒置。因此，現代 AI 加速器（如 NVIDIA H100）大量採用 HBM (高頻寬記憶體) 來解決這個嚴峻的挑戰。
 
@@ -387,14 +345,10 @@ write 函式原型：
 - (d) Google 的倉庫級電腦中心通常維持 10% 到 50% 的伺服器利用率 
     - 伺服器必須預留大量容量以應對突發的流量高峰 (Spikes)，且為了確保低延遲（Tail Latency），系統不能在高負載下運作。若利用率長期達到 70-90%，排隊延遲會劇增，導致使用者體驗嚴重惡化。
 
-</div>
-
 
 ## 第 18 題 ALU, Multiplier
 
-
 ![113-Sys-HW18.png](./images/113-Sys-HW18.png)
-
 
 - (a) Fig. 2 中顯示 partial products 進入的是 3-bit ALU。在相加的過程中，因為部分乘積（Partial Products）需要進行位移（Shift），位移後的相加會產生超過 3 bits 的結果與進位。僅使用 3-bit ALU 會導致資料溢位與遺失。
 
@@ -457,9 +411,7 @@ write 函式原型：
     
 ## 第 21-22 題 Process
 
- 
 ![113-Sys-HW2122.png](./images/113-Sys-HW2122.png) 
- 
 
 ### 第 21 題
 
@@ -478,10 +430,8 @@ write 函式原型：
 - 當程式呼叫一個函式時，Control Flow 會跳轉到該函式的起始位址。為了在函式結束後能「找路回家」，CPU 會將下一條要執行的指令位址（返回位址）推入 stack 中。
 
 ## 第 23-24 題 Process
-
  
 ![113-Sys-HW2324.png](./images/113-Sys-HW2324.png) 
- 
 
 ```
 - 分頁大小 (Page Size)：512 bytes。
@@ -506,8 +456,6 @@ write 函式原型：
 ## 第 25-27 題 Process
 
 ![113-Sys-HW2527.png](./images/113-Sys-HW2527.png)
-
-<div style="page-break-after: always;"></div>
 
 ### 第 25 題
 
@@ -538,16 +486,11 @@ write 函式原型：
     - $I_4 \rightarrow I_5$：addu 產生的 $t0$。每圈減少 2 個，共 4 個 Stall。
     - $I_6 \rightarrow I_7$：addi 產生的 $s1$。每圈減少 2 個，共 4 個 Stall。
 
-<div class="tight-list tight-p ">
-
 ## 第 28-30 題 Process
 
  
 ![113-Sys-HW2830.png](./images/113-Sys-HW2830.png) 
  
-
-<div style="page-break-after: always;"></div>
-
 - 16 位元電腦：指令與資料寬度為 16-bit（2 bytes）
 
 - 虛擬位址 (VA)：長度為 16 bits。
@@ -599,4 +542,3 @@ write 函式原型：
     - $CPI = 1 + 0.75 = \mathbf{1.75}$。
     - 假設指令抓取 (Instruction Fetch) 也有相同失效率，計算會變為：
         - $(1 + 0.25) \times (0.6 + 2.4) = 3.75 \rightarrow CPI = 4.75$。
-</div>

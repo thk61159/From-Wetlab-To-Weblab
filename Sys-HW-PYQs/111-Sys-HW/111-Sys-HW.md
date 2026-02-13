@@ -118,8 +118,6 @@
 
 ![111-Sys-HW07.png](./images/111-Sys-HW07.png) 
 
-<div style="page-break-after: always;"></div>
-
 - Memory-mapped file (mmap): 
     - OS 只是「預約」了地址空間(紀錄在kernal space VMA (Virtual Memory Area))，實際上根本還沒讀硬碟。
     - 當你真的去讀那個記憶體地址（例如 print(ptr[0])）時，CPU 發現資料不在，觸發 Page Fault（缺頁中斷），OS 這時候才趕快去硬碟把那一頁搬進來。這叫做 Demand Paging (需求分頁)。
@@ -166,8 +164,6 @@
 
 - (b) 核心維護一張表格，紀錄不同二進位格式的載入函式，並在執行程式時一個一個嘗試。linux_binfmt (Linked List)，註冊了各種格式的處理器 (Handler)，`execve()` 系統呼叫時，讀取檔案 ELF 的前 128 bytes，Loop through linux_binfmt
 
-<!-- <div style="page-break-after: always;"></div> -->
-
 - (c) 核心經常需要產生無數個「小物件」，例如 `task_struct` (紀錄行程資訊)、`inode` (檔案節點)。這些東西很小（例如只有幾百 Bytes），如果每次都跟系統要一大頁 (4KB)，會造成嚴重的 Internal Fragmentation。
     1. 它先跟底層 (Buddy System) 批發一大塊連續記憶體 (Slabs)。
     2. 把它切成無數個整齊的小塊 (Objects)。 
@@ -211,13 +207,9 @@
 
 - (d) **「Cache 用虛擬/舊資料」而「DMA 用實體/改新資料」造成的資料不同步** ⇒ DRAM 裡的資料已經被 DMA 更新了 ⭢ 但是 CPU 的 Cache 裡面還存著「舊資料」⭢ 因為 CPU Cache 用的是虛擬地址，它可能根本不知道 DMA 剛剛動到的那個實體地址對應到 Cache 裡的哪一行。
 
-<div style="page-break-after: always;"></div>
-
 ## 第 14 題 Clock Rate
 
-
 ![111-Sys-HW14.1.png](./images/111-Sys-HW14.1.png) 
-
 
 ![111-Sys-HW14.2.png](./images/111-Sys-HW14.2.png) 
 
@@ -229,8 +221,6 @@
 
 - (d) More stages 使 Throughput 增加，但單一指令的 Latency (從進到出) 會因為 Pipeline register overhead 而略微增加。
 
-<div style="page-break-after: always;"></div>
-
 ## 第 15 題 Clock Rate
 
 ![111-Sys-HW15.png](./images/111-Sys-HW15.png) 
@@ -241,10 +231,8 @@
 
 - (b) 大核與小核的設計哲學差異
 
-    
     ![111-Sys-HW15.a.png](./images/111-Sys-HW15.a.png) 
     
-
 - (c) Turbo Mode (加速模式) 被溫度與功耗限制，一旦碰到溫度牆或功耗牆，時脈就會被迫降下來，否則晶片會燒掉。
 
 - (d) 編譯器 (Compiler) 負責 Instruction Level Parallelism (ILP) / Data Parallelism
@@ -253,8 +241,6 @@
     - MIMD 意味著有多個獨立的程式流 (Threads/Processes) 在跑。你需要 OS 的 Scheduler 把 Thread A 丟給 Core 1，Thread B 丟給 Core 2。
     - **MIMD 需要  OS 的 Scheduler 調度**
     - **SIMD, vector 需要 compiler 調度**
-
-<div style="page-break-after: always;"></div>
 
 ## 第 16 題 **Floating point**
 
@@ -291,9 +277,7 @@
 
 ## 第 18 題 Pipeline Forwarding
 
-
 ![111-Sys-HW18.png](./images/111-Sys-HW18.png) 
-
 
 - A cut 表示 memory access 後 forwarding to execute stage 不存在，如果在那個階段有 data hazard 就會有問題~其他就如圖
 
@@ -339,7 +323,6 @@
 
 
 ## 第 21-24 題 **Readers-Writers Problem**
-
 
 ![111-Sys-HW2124.png](./images/111-Sys-HW2124.png) 
 

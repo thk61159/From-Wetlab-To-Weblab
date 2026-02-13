@@ -76,8 +76,6 @@
   - Shared Memory (共享記憶體)
   - Message Passing (訊息傳遞)
 
-<div style="page-break-after: always;"></div>
-
 - (e) **deadlock處理方法**
   1. Deadlock Prevention (死結預防)
       - 這是一種 Static 的策略。核心思想是破壞 Deadlock 發生的四個必要條件中的「至少一項」，以此保證死結永遠不會發生。
@@ -203,8 +201,6 @@
 ## 第 10 題 Child Process
 
 ![105-Sys-HW10](./images/105-Sys-HW10.png)
-
-<div style="page-break-after: always;"></div>
 
 - Child Process (子行程)
   - 是用 fork() 或類似機制由 parent process 生成的
@@ -365,7 +361,6 @@
 |multi r2 r2 ☐|IF  |ID  |EX  |ME |WB  |    |    |    |    |
 |sw r2, ☐  |    |    |    |    |IF  |ID  |EX  |ME |WB  |
 
-<div style="page-break-after: always;"></div>
 
 **hazard with forwarding unit but no hazard detect (compiler 要確保 addi ID 階段讀取正確的資料)**
 | instr            | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11|
